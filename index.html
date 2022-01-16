@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Chapter 1.</p>
+
+<label>Question: What is 2 + 5 ?</label>
+<textarea id="answerField" rows="1" cols="50"></textarea>
+<br><br>
+
+<button onclick="checkAnswer()"> Submit Answer</button>
+
+<p><strong>Note:</strong> When you submit the correct answer, you will move on the 2nd chapter</p>
+
+<p id="demo"></p>
+
+<script>
+function checkAnswer(){	
+        var answer = document.getElementById("answerField").value;
+	if (answer == "7") {
+		location.replace("ch2.html");
+	} else {
+		document.getElementById("demo").innerHTML = "Your answer " + answer + " is wrong. Try Again";
+	}
+}
+
+</script>
+
+</body>
+</html>
